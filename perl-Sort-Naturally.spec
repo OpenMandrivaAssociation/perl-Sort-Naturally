@@ -1,17 +1,18 @@
-%define module   Sort-Naturally
-%define version    1.02
-%define release    %mkrel 2
+%define upstream_name    Sort-Naturally
+%define upstream_version 1.02
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    sort lexically, but sort numeral parts numerically
+License:    GPL+ or Artistic
 Group:      Development/Perl
-Summary:    no summary found
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Sort/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Sort/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module exports two functions, 'nsort' and 'ncmp'; they are used in
@@ -20,7 +21,7 @@ sorting, numeric substrings are compared numerically, and other
 word-characters are compared lexically.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,4 +42,3 @@ rm -rf %{buildroot}
 %doc ChangeLog README
 %{_mandir}/man3/*
 %perl_vendorlib/Sort
-
