@@ -1,15 +1,15 @@
 %define upstream_name    Sort-Naturally
-%define upstream_version 1.02
+%define upstream_version 1.03
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.03
+Release:	1
 
 Summary:	Sort lexically, but sort numeral parts numerically
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Sort/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Sort/Sort-Naturally-1.03.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -55,3 +55,4 @@ make test
 
 * Sat May 31 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.02-1mdv2009.0
 - first mdv release 
+
