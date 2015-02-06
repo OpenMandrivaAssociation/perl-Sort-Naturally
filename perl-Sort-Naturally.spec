@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.03
-Release:	2
+Release:	3
 
 Summary:	Sort lexically, but sort numeral parts numerically
 License:	GPL+ or Artistic
