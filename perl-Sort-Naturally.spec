@@ -8,7 +8,7 @@ Release:	3
 Summary:	Sort lexically, but sort numeral parts numerically
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Sort/Sort-Naturally-1.03.tar.gz
 
 BuildRequires:	perl-devel
