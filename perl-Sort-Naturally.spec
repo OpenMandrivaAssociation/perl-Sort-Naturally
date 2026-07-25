@@ -2,14 +2,14 @@
 %define upstream_version 1.03
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.03
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Sort lexically, but sort numeral parts numerically
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Sort/Sort-Naturally-1.03.tar.gz
+Url:		https://github.com/bingos/sort-naturally
+Source0:	https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Sort-Naturally-1.03.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
