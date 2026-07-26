@@ -1,9 +1,7 @@
 %define upstream_name    Sort-Naturally
-%define upstream_version 1.03
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	1.03
+Release:	5
 
 Summary:	Sort lexically, but sort numeral parts numerically
 License:	GPL+ or Artistic
@@ -22,7 +20,7 @@ sorting, numeric substrings are compared numerically, and other
 word-characters are compared lexically.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -43,9 +41,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.20.0-1mdv2010.0
 + Revision: 404392
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.02-2mdv2009.0
+- rebuild using %1.03 Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.02-2mdv2009.0
 + Revision: 268724
 - rebuild early 2009.0 package (before pixel changes)
 
